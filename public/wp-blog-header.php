@@ -1,12 +1,11 @@
 <?php
-
 /**
  * Loads the WordPress environment and template.
  *
  * @package WordPress
  */
 
-if (!isset($wp_did_header)) {
+if ( ! isset( $wp_did_header ) ) {
 
 	$wp_did_header = true;
 
@@ -16,8 +15,7 @@ if (!isset($wp_did_header)) {
 	// Set up the WordPress query.
 	wp();
 
-	echo "<h2>Hello from wp-blog-header.php</h2>";
-
 	// Load the theme template.
 	require_once ABSPATH . WPINC . '/template-loader.php';
+
 }
