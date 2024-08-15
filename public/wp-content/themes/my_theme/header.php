@@ -74,7 +74,27 @@
 
     <div class="container">
       <div class="header-bottom">
-        <ul class="categories-nav">
+
+        <?php wp_nav_menu([
+          'theme_location'  => 'header',
+          // 'menu'            => '',
+          'container'       => false,
+          // 'container_class' => '',
+          // 'container_id'    => '',
+          'menu_class'      => 'categories-nav',
+          'menu_id'         => false,
+          'echo'            => true,
+          // 'fallback_cb'     => 'wp_page_menu',
+          // 'before'          => '',
+          // 'after'           => '',
+          // 'link_before'     => '',
+          // 'link_after'      => '',
+          'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+          // 'depth'           => 0,
+          // 'walker'          => '',
+        ]); ?>
+
+        <!-- <ul class="categories-nav">
           <li class="categories-nav__item">
             <a href="#" class="category__link">
               дивани<svg class="arrow__icon" width="14" height="10">
@@ -117,8 +137,17 @@
               </svg>
             </a>
           </li>
-        </ul>
-        <a href="#" class="logo" title="на головну" aria-label="посилання на головну сторінку"><img src="./images/logo-black.png" alt="logo Furniture test" /></a>
+        </ul> -->
+        <a href="#" class="logo" title="на головну" aria-label="посилання на головну сторінку">
+
+          <?php
+          if (has_custom_logo()) {
+            // логотип есть выводим его
+            echo get_custom_logo();
+          }
+          ?>
+
+        </a>
         <div class="wrapper">
           <a href="#" class="cart-btn">
             <svg class="shopping-cart__icon" width="30" height="30">
