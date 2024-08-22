@@ -1,7 +1,8 @@
-<?php get_header();
+<?php
+get_header();
 
 echo "<h1 style='color:red;'> 
-        This is Index page 
+        This is Front-Page Template 
       </h1>";
 ?>
 
@@ -282,4 +283,6 @@ echo "<h1 style='color:red;'>
   </section>
 </main>
 
-<?php get_footer(); ?>
+<?php
+get_footer();
+?>
