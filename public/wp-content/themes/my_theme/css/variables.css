@@ -1,0 +1,9 @@
+:root {
+  --main-color: #1e2e36;
+  --white-color: #ffffff;
+  --accent-color: #44c697;
+  --stock-color: #ff1b1b;
+
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --trans-duration: 300ms;
+}
